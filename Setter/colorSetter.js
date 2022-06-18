@@ -1,10 +1,10 @@
-const {command} = require("./Setter.js");
+const {Change} = require("./Setter.js");
 // Red 색상변경
 function RedColorSetter(_color) {
     this.color = _color;
 }
-RedColorSetter.prototype = new command();
-RedColorSetter.prototype.excute = function (i) {
+RedColorSetter.prototype = new Change();
+RedColorSetter.prototype.change = function (i) {
     return this.color.setRed();
 }
 function RedColor(){
@@ -18,8 +18,8 @@ RedColor.prototype.setRed = function (i) {
 function BuleColorSetter(_color) {
     this.color = _color;
 }
-BuleColorSetter.prototype = new command();
-BuleColorSetter.prototype.excute = function () {
+BuleColorSetter.prototype = new Change();
+BuleColorSetter.prototype.change = function () {
    return this.color.setBule();
 }
 function BuleColor() {

@@ -1,10 +1,10 @@
-const {command} = require("./Setter.js");
+const {Change} = require("./Setter.js");
 //청 재질 변경
 function JinSetter(_fabric) {
     this.fabric = _fabric;
 }
-JinSetter.prototype = new command();
-JinSetter.prototype.excute = function () {
+JinSetter.prototype = new Change();
+JinSetter.prototype.change = function () {
     return this.fabric.setJin();
 }
 function Jin(){
@@ -18,8 +18,8 @@ Jin.prototype.setJin = function () {
 function CottonSetter(_fabric) {
     this.fabric = _fabric;
 }
-CottonSetter.prototype = new command();
-CottonSetter.prototype.excute = function () {
+CottonSetter.prototype = new Change();
+CottonSetter.prototype.change = function () {
    return this.fabric.setCotton();
 }
 function Cotton() {

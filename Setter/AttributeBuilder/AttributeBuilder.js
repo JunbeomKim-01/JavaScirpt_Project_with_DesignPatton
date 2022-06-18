@@ -11,24 +11,24 @@ var ClothSet = function(){
         _cloth = cloth;
         return this;
     },
-    setClothSize : function(sizeCommand){
-        let command = new Setter();
-        command.set(sizeCommand);
-        _size = command.run();
+    setClothSize : function(size){
+        let setter = new Setter();
+        setter.set(size);
+        _size = setter.run();
         _cloth.attribute.addAttribute(_size);
         return this;    
     },
-    setClothColor : function(colorCommand){
-        let command = new Setter();
-        command.set(colorCommand);
-        _color = command.run();
+    setClothColor : function(color){
+        let setter = new Setter();
+        setter.set(color);
+        _color = setter.run();
         _cloth.attribute.addAttribute(_color);
         return this;
     },
-    setClothFabric : function(fabricCommand){
-        let command = new Setter();
-        command.set(fabricCommand);
-        _fabric = command.run();
+    setClothFabric : function(fabric){
+        let setter = new Setter();
+        setter.set(fabric);
+        _fabric = setter.run();
         _cloth.attribute.addAttribute(_fabric);
         return this;
     },

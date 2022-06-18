@@ -1,10 +1,10 @@
-const {command} = require("./Setter.js");
+const {Change} = require("./Setter.js");
 // L 사이즈로 변경
-function LsizeCommand(_size) {
+function LsizeSetter(_size) {
     this.size = _size;
 }
-LsizeCommand.prototype = new command();
-LsizeCommand.prototype.excute = function () {
+LsizeSetter.prototype = new Change();
+LsizeSetter.prototype.change = function () {
     return this.size.setLsize();
 }
 function Lsize() {
@@ -18,8 +18,8 @@ Lsize.prototype.setLsize = function () {
 function MsizeSetter(_size) {
     this.size = _size;
 }
-MsizeSetter.prototype = new command();
-MsizeSetter.prototype.excute = function () {
+MsizeSetter.prototype = new Change();
+MsizeSetter.prototype.change = function () {
     return this.size.setMsize();
 }
 function Msize() {
@@ -33,8 +33,8 @@ Msize.prototype.setMsize = function () {
 function SsizeSetter(_size) {
     this.size = _size;
 }
-SsizeSetter.prototype = new command();
-SsizeSetter.prototype.excute = function () {
+SsizeSetter.prototype = new Change();
+SsizeSetter.prototype.change = function () {
     return this.size.setSsize();
 }
 function Ssize() {
@@ -46,4 +46,4 @@ Ssize.prototype.setSsize = function () {
 } 
 
 
-module.exports = {SsizeSetter,Ssize,Msize,MsizeSetter,LsizeCommand,Lsize};
+module.exports = {SsizeSetter,Ssize,Msize,MsizeSetter,LsizeSetter,Lsize};

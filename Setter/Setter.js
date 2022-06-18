@@ -1,12 +1,12 @@
-function command(){
-    this.excute = function(){};
+function Change(){
+    this.change = function(){};
 }
 function Setter() {
-    this.set = function (_command) {
-        this.command = _command;
+    this.set = function (_attribute) {
+        this.attribute = _attribute;
     }   
     this.run = function () {
-        return this.command.excute();
+        return this.attribute.change();
     }
 }
-module.exports = {Setter,command};
+module.exports = {Setter,Change};
